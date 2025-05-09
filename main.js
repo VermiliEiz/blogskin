@@ -239,12 +239,6 @@
 		 * 构建自定义 DOM 元素
 		 */
 		buildCustomElements() {
-			// Change page title.
-			const blogTitle = $(this.cnblogs.blogTitle).find('h1 a').html();
-			const autherName = $(this.cnblogs.publicProfile).find('a:eq(0)').html();
-			let $title = $('head').find('title');
-			$title.html($title.html().replace(`春原庄的雪 | ${autherName}`, `${blogTitle}`));
-
 			// Build a tags button on navbar.
 			let $navList = $(this.cnblogs.navList);
 			$.each($navList.find('li'), (index, nav) => {
